@@ -1,0 +1,32 @@
+<div class="wrapper">
+    <div id="formContent">
+      <div>
+        <img src="../assets/images/logo.jpg" id="icon" alt="User Icon" />
+      </div>
+  
+      <!-- Login Form -->
+      <div class="card-body">
+        <form>
+          <div class="input-group form-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text"><i class="fa fa-user"></i></span>
+            </div>
+            <input [(ngModel)]="userName" name="userName" type="text" class="form-control" placeholder="username">      
+          </div>
+          <div class="input-group form-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text"><i class="fa fa-key"></i></span>
+            </div>
+            <input [(ngModel)]="pwd" name="pwd" type="password" class="form-control" placeholder="password">
+          </div>
+          <input type="submit" (click)="submitForm()" value="Log In">
+        </form>  
+      </div>
+      
+      <!-- Remind Passowrd -->
+      <div id="formFooter">
+        <a class="underlineHover" href="#">Forgot Password?</a>
+      </div>
+  
+    </div>
+  </div>

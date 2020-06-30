@@ -14,8 +14,14 @@ export class LoginComponent {
   constructor(private router: Router) { }
 
   submitForm() {
-    this.router.navigateByUrl('/home');
-    sessionStorage.setItem('loggedInUser', this.userName);
+    if(this.userName != undefined && this.userName != "" && this.pwd != undefined && this.pwd != "") {
+      this.router.navigateByUrl('/home');
+      sessionStorage.setItem('loggedInUser', this.userName);
+
+    } else {
+      alert("Enter login details");
+    }
+    
   }
 
 }

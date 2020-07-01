@@ -15,7 +15,7 @@ export class LoginComponent {
 
   submitForm() {
     if(this.userName != undefined && this.userName != "" && this.pwd != undefined && this.pwd != "") {
-      this.router.navigateByUrl('/home');
+      this.router.navigateByUrl('https://ens-auto-ml.herokuapp.com/');
       sessionStorage.setItem('loggedInUser', this.userName);
 
     } else {
